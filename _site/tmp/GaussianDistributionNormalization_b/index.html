@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Univariate Gaussian Distribution is Normalized</TITLE>
+<META NAME="description" CONTENT="Univariate Gaussian Distribution is Normalized">
+<META NAME="keywords" CONTENT="GaussianDistributionNormalization_b">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="GaussianDistributionNormalization_b.css">
+
+</HEAD>
+
+<BODY >
+<H1 ALIGN=CENTER>Univariate Gaussian Distribution is Normalized</H1>
+<P ALIGN=CENTER><STRONG>Premmi</STRONG>
+</P><BR><P ALIGN=CENTER><B>Date:</B> May 14, 2016</P>
+
+<HR>
+
+<DIV ALIGN="LEFT">
+To prove that the univariate Gaussian distribution is normalized, we will first show that it is normalized for a zero-mean Gaussian and extend that result to show that <!-- MATH
+ $\mathcal{N}$
+ -->
+<SPAN CLASS="MATH">1#1</SPAN>(<SPAN  CLASS="textit">x</SPAN><SPAN CLASS="MATH">2#2</SPAN><SPAN CLASS="MATH">3#3</SPAN>, <SPAN CLASS="MATH">4#4</SPAN><SPAN CLASS="MATH">5#5</SPAN>) is normalized.		
+<BR>
+<BR>
+The pdf of the zero-mean Gaussian distribution is given by:			
+</DIV><P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH">6#6</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P><DIV ALIGN="LEFT">
+To prove that the above expression is normalized, we have to show that 
+</DIV><P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH">7#7</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P><DIV ALIGN="LEFT">
+</DIV><P></P>
+<DIV><I>Proof</I>.
+
+Let
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH">9#9</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Squaring the above expression,
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH">10#10</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+To integrate this expression we make the transformation from Cartesian coordinates (x, y) to polar coordinates (r, <SPAN CLASS="MATH">11#11</SPAN>), which is defined by
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH">12#12</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">5</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH">13#13</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and using the trigonometric identity <!-- MATH
+ $cos^2\,\theta + sin^2\, \theta = 1$
+ -->
+<SPAN CLASS="MATH">14#14</SPAN>, we have <!-- MATH
+ $x^2 + y^2 = r^2$
+ -->
+<SPAN CLASS="MATH">15#15</SPAN>. Also the Jacobian of the change of variables is given by,
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH">16#16</SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">17#17</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">18#18</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">19#19</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">20#20</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+using the same trigonometric identity <!-- MATH
+ $cos^2\,\theta + sin^2\, \theta = 1$
+ -->
+<SPAN CLASS="MATH">14#14</SPAN>.
+Thus equation (4) can be rewritten as 
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH">21#21</SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">22#22</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">7</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">23#23</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">8</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">24#24</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">9</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">25#25</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">10</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">26#26</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="eqn-number">11</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where we have used the change of variables <SPAN CLASS="MATH">27#27</SPAN>.
+Thus <P><!-- MATH
+ \begin{displaymath}
+I = \left(2\pi\sigma^2\right)^{1/2}.
+\end{displaymath}
+ -->
+</P><DIV ALIGN="CENTER" CLASS="mathdisplay">
+28#28
+</DIV><P></P>
+
+<BR>Finally to prove that <!-- MATH
+ $\mathcal{N}$
+ -->
+<SPAN CLASS="MATH">1#1</SPAN>(<SPAN  CLASS="textit">x</SPAN><SPAN CLASS="MATH">2#2</SPAN><SPAN CLASS="MATH">3#3</SPAN>, <SPAN CLASS="MATH">4#4</SPAN><SPAN CLASS="MATH">5#5</SPAN>) is normalized, we make the tranformation <!-- MATH
+ $y = x - \mu$
+ -->
+<SPAN CLASS="MATH">29#29</SPAN> so that,
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH">30#30</SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">31#31</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">32#32</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH">33#33</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+as required.
+ 8#8
+</DIV><P></P>
+<DIV ALIGN="LEFT">
+</DIV> 
+<H2><A NAME="SECTION00010000000000000000">
+Bibliography</A>
+</H2><DL COMPACT><DD><P></P><DT><A NAME="kevinmurphy">1</A>
+<DD> 
+Kevin P. Murphy. 
+<SPAN  CLASS="textit">Machine Learning: A Probabilistic Perspective</SPAN>. 
+<SPAN  CLASS="textbf">Exercise 2.11</SPAN> Normalization constant for a 1D Gaussian.
+
+<P>
+<P></P><DT><A NAME="christopherbishop">2</A>
+<DD> 
+Christopher M. Bishop. 
+<SPAN  CLASS="textit"> Pattern Recognition and Machine Learning</SPAN>.  
+<SPAN  CLASS="textbf">Exercise 1.7</SPAN>
+</DL>
+<H1><A NAME="SECTION00020000000000000000">
+About this document ...</A>
+</H1>
+ <STRONG>Univariate Gaussian Distribution is Normalized</STRONG><P>
+This document was generated using the
+<A HREF="http://www.latex2html.org/"><STRONG>LaTeX</STRONG>2<tt>HTML</tt></A> translator Version 2008 (1.71)
+<P>
+Copyright &#169; 1993, 1994, 1995, 1996,
+Nikos Drakos, 
+Computer Based Learning Unit, University of Leeds.
+<BR>Copyright &#169; 1997, 1998, 1999,
+<A HREF="http://www.maths.mq.edu.au/~ross/">Ross Moore</A>, 
+Mathematics Department, Macquarie University, Sydney.
+<P>
+The command line arguments were: <BR>
+ <STRONG>latex2html</STRONG> <TT>-split 0 -show_section_numbers -local_icons -no_navigation GaussianDistributionNormalization_b.tex</TT>
+<P>
+The translation was initiated by Ubuntu on 2016-05-14<BR><HR>
+<ADDRESS>
+Ubuntu
+2016-05-14
+</ADDRESS>
+</BODY>
+</HTML>

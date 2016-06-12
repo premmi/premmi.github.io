@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Machine Learning Notebook</title>
+    <description></description>
+    <link>http://premmi.github.io/</link>
+    <atom:link href="http://premmi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 12 Jun 2016 08:57:38 +0530</pubDate>
+    <lastBuildDate>Sun, 12 Jun 2016 08:57:38 +0530</lastBuildDate>
+    <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>Variance of Univariate Gaussian Distribution</title>
+        <description>The normalization condition of the univariate Gaussian distribution is given by:
+$$\begin{align}
+\int_{-\infty}^{\infty}\mathcal{N}\left(\textit{x}\mid\mu, \sigma^{2}\right)dx &amp;= 1\\
+\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace dx &amp;= 1\\
+\int_{-\infty}^{\infty} \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace dx &amp;= \left(2\pi\sigma^2\right)^{1/2}
+\end{align}$$
+Differentiating both sides of $(3)$ with respect to $\sigma^2$,
+$$\begin{align}
+\int_{-\infty}^{\infty} \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace \left\lbrace \frac{\left(x-\mu\right)^2}{2}\right\rbrace \left\lbrace \frac{1}{\left(\sigma^2\right)^2} \right\rbrace dx &amp;= \left(\frac{1}{2}\right) \left(2\pi\sigma^2\right)^{-1/2} \left(2\pi\right)\\
+\int_{-\infty}^{\infty} \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace \left(x-\mu\right)^2 dx &amp;= \sigma^2 \, \sqrt{2\pi\sigma^2}\\
+\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{\infty} \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace \left(x-\mu\right)^2 dx &amp;= \sigma^2
+\end{align}$$
+It follows directly from $(6)$ that
+$$\begin{align}
+\mathbb{E}\left[\left(x-\mu\right)^2\right] &amp;= var\left[x\right] = \sigma^2
+\end{align}$$
+Expanding the left hand side of equation $(7)$,
+$$\begin{align*}
+\mathbb{E}\left[x^2\right] - 2\mu\mathbb{E}\left[x\right] + \mu^2 &amp;= \sigma^2\\
+\mathbb{E}\left[x^2\right] - 2\mathbb{E}\left[x\right]^2 + \mathbb{E}\left[x\right]^2 &amp;= \sigma^2\\
+\mathbb{E}\left[x^2\right] - \mathbb{E}\left[x\right]^2 &amp;= \sigma^2
+\end{align*}$$
+</description>
+        <pubDate>Sun, 03 Apr 2016 14:28:28 +0530</pubDate>
+        <link>http://premmi.github.io/variance-of-univariate-gaussian-distribution</link>
+        <guid isPermaLink="true">http://premmi.github.io/variance-of-univariate-gaussian-distribution</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Univariate Gaussian Distribution is Normalized</title>
+        <description>To prove that the univariate Gaussian distribution is normalized, we will first show that it is normalized for a zero-mean Gaussian and extend that result to show that $\mathcal{N}$($x$$\mid$$\mu$, $\sigma$$^{2}$) is normalized.		
+&lt;p&gt;
+The pdf of the zero-mean Gaussian distribution is given by:			
+&lt;/p&gt;
+\begin{align}		
+\varphi(x)= \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left(-\frac{1}{2\sigma^2}x^2\right)\,\,\,\,\,\,\,-\infty &lt; x &lt; \infty.			
+\end{align}
+To prove that the above expression is normalized, we have to show that 
+\begin{align}
+\int_{-\infty}^{\infty} \exp\left(-\frac{1}{2\sigma^2}x^2\right)dx = \sqrt{2\pi\sigma^2}
+\end{align}
+&lt;em&gt;Proof. &lt;/em&gt;
+Let
+\begin{align}
+I = \int_{-\infty}^{\infty} \exp\left(-\frac{1}{2\sigma^2}x^2\right)dx
+\end{align}
+
+Squaring the above expression,
+\begin{align}
+I^2 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} \exp\left(-\frac{1}{2\sigma^2}x^2-\frac{1}{2\sigma^2}y^2\right)dx\,dy
+\end{align}
+To integrate this expression we make the transformation from Cartesian coordinates (x, y) to polar coordinates (r, $\theta$), which is defined by
+\begin{align}
+x = r \, cos\,\theta\\
+y = r \, sin\, \theta
+\end{align}
+and using the trigonometric identity $cos^2\,\theta + sin^2\, \theta = 1$, we have $x^2 + y^2 = r^2$. Also the Jacobian of the change of variables is given by,
+\begin{align*}
+\dfrac{\partial \left(x, y\right)}{\partial \left(r, \theta\right)} \,\,&amp;= \,\,\,\begin{vmatrix}
+&amp;\dfrac{\partial \left(x \right)}{\partial \left(r \right)} &amp;\dfrac{\partial \left(x \right)}{\partial \left(\theta \right)}&amp;\\
+\\
+&amp;\dfrac{\partial \left(y \right)}{\partial \left(r \right)} &amp;\dfrac{\partial \left(y \right)}{\partial \left(\theta \right)}&amp;
+\end{vmatrix}\\
+\\
+&amp;= \,\,\,
+\begin{vmatrix}
+&amp;cos \,\theta &amp;-r\,sin \, \theta&amp;
+\\
+&amp;sin \,\theta &amp;r\,cos\,\theta&amp;
+\end{vmatrix}\\
+&amp;=\,\,\, r\, cos^2\,\theta + r\, sin^2\,\theta
+\\
+&amp;=\,\,\, r
+\end{align*}
+using the same trigonometric identity $cos^2\,\theta + sin^2\, \theta = 1$.
+Thus equation (4) can be rewritten as 
+\begin{align}
+I^2 \,\,&amp;=\,\,\, \int_{0}^{2\pi}\int_{0}^{\infty} \exp\left(-\frac{r^2}{2\sigma^2}\right) r\,dr\,d\theta 
+\\
+&amp;= \,\,\,2\pi\int_{0}^{\infty} \exp\left(-\frac{r^2}{2\sigma^2}\right) r\,dr
+\\
+&amp;= \,\,\,2\pi\int_{0}^{\infty} \exp\left(-\frac{u}{2\sigma^2}\right) \frac{1}{2}\,du
+\\
+&amp;=\,\,\,\pi\left[\exp\left(-\frac{u}{2\sigma^2}\right)\,\left(-2\sigma^2\right)\right]_0^\infty
+\\
+&amp;=\,\,\,2\pi\sigma^2
+\end{align}
+where we have used the change of variables $r^2 = u$.
+Thus $$I = \left(2\pi\sigma^2\right)^{1/2}.$$
+
+Finally to prove that $\mathcal{N}$(x$\mid$$\mu$, $\sigma$$^{2}$) is normalized, we make the tranformation $y = x - \mu$ so that,
+\begin{align*}
+\int_{-\infty}^{\infty} \mathcal{N}(\textit{x}\mid\mu, \sigma^{2})\,dx \,\,&amp;= \,\,\,\frac{1}{\left(2\pi\sigma^2\right)^{1/2}} \int_{-\infty}^{\infty} \exp\left(-\frac{y^2}{2\sigma^2}\right)\,dy\\
+&amp;=\,\,\,\frac{I}{\left(2\pi\sigma^2\right)^{1/2}}\\
+&amp;=\,\,\,1
+\end{align*} 
+as required.
+</description>
+        <pubDate>Sun, 03 Apr 2016 14:28:28 +0530</pubDate>
+        <link>http://premmi.github.io/univariate-gaussian-distribution-is-normalized</link>
+        <guid isPermaLink="true">http://premmi.github.io/univariate-gaussian-distribution-is-normalized</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mode of Multivariate Gaussian Distribution</title>
+        <description>&lt;p&gt;
+&lt;em&gt;Proof. &lt;/em&gt;
+The pdf of &lt;strong&gt;$x$&lt;/strong&gt; $\sim$ $\mathcal{N} \left(\boldsymbol{\mu},\boldsymbol{\Sigma}\right)$ is given by
+$$ f(x) = \dfrac{1}{\left(2\pi\right)^{D/2}} \dfrac{1}{\vert\boldsymbol{\Sigma}\vert^{1/2}} \exp \left\lbrace -\dfrac{1}{2}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} \left(\mathbf{x} - \boldsymbol{\mu}\right) \right\rbrace
+$$
+where x is &lt;em&gt;d&lt;/em&gt; dimensional.
+&lt;br&gt;
+&lt;p style=&quot; text-align: justify; &quot;&gt;
+To find the mode i.e. the maximum of the Gaussian distribution, we differentiate the pdf with respect to &lt;strong&gt;x&lt;/strong&gt; and equate it to $0$ to find the critical point where the function is maximum or minimum and then we use the second derivative test to ascertain that the function is maximized at that point.&lt;em&gt;(The second derivative test for a function of more than one variable generalizes to a test based on the eigenvalues of the function&#39;s Hessian matrix at the critical point. Assuming that all the second order partial derivatives of the function are continuous on a neighbourhood of a critical point &lt;strong&gt;x&lt;/strong&gt;,  then if the eigenvalues of the Hessian at &lt;strong&gt;x&lt;/strong&gt; are all &lt;strong&gt;positive&lt;/strong&gt;, then &lt;strong&gt;x&lt;/strong&gt; is a local &lt;strong&gt;minimum&lt;/strong&gt;, if the eigenvalues are all &lt;strong&gt;negative&lt;/strong&gt;, then &lt;strong&gt;x&lt;/strong&gt; is a local &lt;strong&gt;maximum&lt;/strong&gt;, and if some are positive and some negative, then the point is a &lt;strong&gt;saddle point&lt;/strong&gt;. If the Hessian matrix is &lt;strong&gt;singular&lt;/strong&gt;, then the second derivative test is &lt;strong&gt;inconclusive&lt;/strong&gt;.)&lt;/em&gt;
+&lt;/p&gt;
+
+Differentiating $(1)$ with respect to &lt;strong&gt;x&lt;/strong&gt;,
+\begin{align}
+\dfrac{\partial f(\mathbf{x})}{\partial \mathbf{x}} &amp;= \dfrac{1}{\left(2\pi\right)^{D/2}} \dfrac{1}{\vert\boldsymbol{\Sigma}\vert^{1/2}} \exp \left\lbrace -\dfrac{1}{2}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} \left(\mathbf{x} - \boldsymbol{\mu}\right) \right\rbrace \left\lbrace-\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}\right\rbrace \\
+&amp;= -f(\mathbf{x})\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}
+\end{align} 
+
+Equating (2) to zero, we get the critical point
+\begin{align}
+\mathbf{x} &amp;= \boldsymbol{\mu}
+\end{align}
+
+To verify that the pdf is maximized at (4), we evaluate the Hessian matrix at $\boldsymbol{\mu}$ and check that it is negative definite.&lt;br&gt;
+
+Differentiating (3) with respect to $\mathbf{x}$,
+\begin{align}
+\dfrac{\partial^2 f(\mathbf{x})}{\partial \mathbf{x} \partial \mathbf{x}^T} &amp;= \dfrac{\partial}{\partial \mathbf{x}}\left(\dfrac{\partial f(\mathbf{x})}{\partial  \mathbf{x}^T}\right)\\
+&amp;= \dfrac{\partial}{\partial \mathbf{x}}\left(-f(\mathbf{x})\left(\mathbf{x}   - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}}\right)\\
+&amp;= f(\mathbf{x})\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} - f(\mathbf{x})\boldsymbol{\Sigma^{-1}}\\
+&amp;= f(\mathbf{x})\left(\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} - \boldsymbol{\Sigma^{-1}}\right)
+\end{align}
+Evaluating (8) at $\mathbf{x} = \boldsymbol{\mu}$ we get,
+\begin{align}
+\dfrac{\partial^2 f(\mathbf{x})}{\partial \mathbf{x} \partial \mathbf{x}^T}\Bigr|_{\mathbf{x}=\boldsymbol{\mu}} &amp;= -f(\boldsymbol{\mu}) \boldsymbol{\Sigma^{-1}}
+\end{align}
+&lt;p&gt;
+We know that the covariance matrix $\boldsymbol{\Sigma}$ is positive definite, hence its inverse $\boldsymbol{\Sigma^{-1}}$ is also positive definite.&lt;em&gt;(since if $\lambda$ is an eigenvalue of $\boldsymbol{\Sigma}$, then 1/$\lambda$ is the corresponding eigenvalue of $\boldsymbol{\Sigma^{-1}}$. As $\lambda$ is positive, so is 1/$\lambda$ which implies that all the eigenvalues of $\boldsymbol{\Sigma^{-1}}$ are positive.)&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;
+We know that $f(\boldsymbol{\mu})$ is positive everywhere, since the pdf is positive, and hence $-\boldsymbol{\Sigma^{-1}}$ is negative definite which proves that the pdf is maximized at $\mathbf{x} = \boldsymbol{\mu}$.&lt;em&gt;(if $\mathbf{Ax} = \lambda\mathbf{x}$, then $-\mathbf{Ax} = -\lambda\mathbf{x}$)&lt;/em&gt;
+
+&lt;strong&gt;Hence the mode of the multivariate Gaussian distribution is $\boldsymbol{\mu}$.&lt;/strong&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Apr 2016 14:28:28 +0530</pubDate>
+        <link>http://premmi.github.io/mode-of-multivariate-gaussian</link>
+        <guid isPermaLink="true">http://premmi.github.io/mode-of-multivariate-gaussian</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mean of Univariate Gaussian Distribution</title>
+        <description>&lt;p&gt;
+&lt;em&gt;Proof. &lt;/em&gt;The mean of the univariate Gaussian distribution is given by: 
+\begin{align}
+\mathbb{E}\left[x\right] &amp;= \,\,\,\int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace x\,dx\\
+\end{align}  
+Changing the variables using $y = x - \mu$, the above expression becomes
+\begin{align}
+\mathbb{E}\left[x\right] &amp;= \,\,\,\int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)\left(y+\mu\right)dy\\
+&amp;=\,\,\,\int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)y\,dy \notag\\\ &amp;\,\,\,\,\,\,\,\,+ \int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)\mu\,dy\\
+&amp;= \,\,\,\mu
+\end{align}
+The first term in the sum is an odd integrand and hence it integrates to 0. In the second term, we can pull the constant $\mu$ outside the integral and we are left with the normalized Gaussian distribution which integrates to 1.  &lt;span style=&quot;font-size: 20px;float:right;&quot;&gt;&amp;#9633;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;&lt;em&gt;&lt;strong&gt;Note on odd functions:&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+A function $f$ defined from $\mathbb{R}$ to $\mathbb{R}$ is an &lt;em&gt;odd function&lt;/em&gt; if $f(-x) = -f(x)$ for all $x$. Odd functions have the property that for any $a$, $$\int_{-a}^{a}f(x)\,dx = 0,$$ assuming that the integral exists.This is because the area under the function from
+$-a$ to 0 cancels the area under the function from 0 to $a$.
+
+To show this explicitly, let us integrate the first term in the sum from $-\infty$ to 0 and from 0 to $\infty$. This term should integrate to 0. 
+\begin{align*}
+&amp; \,\,\,\int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)y\,dy\\
+&amp;=\,\,\,\int_{-\infty}^{0} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)y\,dy\\ &amp;\,\,\,\,\,\,\,\,+ \int_{0}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)y\,dy\\
+&amp;=\,\,\,\int_{\infty}^{0} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\left(\frac{1}{2}\right)\exp\left(-\frac{1}{2\sigma^2}u\right)du\\ &amp;\,\,\,\,\,\,\,\,+ \int_{0}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\left(\frac{1}{2}\right)\exp\left(-\frac{1}{2\sigma^2}u\right)du \tag{i}\label{result}\\
+&amp;=\,\,\,\left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\left(\frac{1}{2}\right)\left(-{2\sigma^2}\right)\\ &amp;\,\,\,\,\,\,\,\,\,\,\left\lbrace\left[\exp\left(-\frac{1}{2\sigma^2}u\right)\right]_{\infty}^{0} + \left[\exp\left(-\frac{1}{2\sigma^2}u\right)\right]_{0}^{\infty}\right\rbrace\\
+&amp;=\,\,\,\left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\left(\frac{1}{2}\right)\left(-{2\sigma^2}\right)\left\lbrace\left[\frac{1}{e^0}-\frac{1}{e^\infty}\right] + \left[\frac{1}{e^\infty}-\frac{1}{e^0}\right]\right\rbrace\\
+&amp;=\,\,\,0
+\end{align*}
+where we have used the change of variables $y^2=u$ and hence $2y\,dy=du$. Also from \eqref{result} we can immediately conclude that the expression integrates to 0 since $$\int_{a}^{b} f(x)\, dx + \int_{b}^{a} f(x)\, dx = \int_{a}^{b} f(x)\, dx - \int_{a}^{b} f(x)\, dx = 0$$
+&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Apr 2016 14:28:28 +0530</pubDate>
+        <link>http://premmi.github.io/mean-of-univariate-gaussian-distribution</link>
+        <guid isPermaLink="true">http://premmi.github.io/mean-of-univariate-gaussian-distribution</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

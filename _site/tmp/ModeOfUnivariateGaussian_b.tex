@@ -1,0 +1,48 @@
+\documentclass[14pt]{extarticle}
+\usepackage[margin=.75in, paperwidth=8.5in, paperheight=11in]{geometry}
+\usepackage{amsthm,amsmath,amssymb}
+\title{Mode of Univariate Gaussian Distribution}
+\author{Premmi}	
+\date{\today}
+\begin{document}    
+\maketitle
+\begin{flushleft}	
+\begin{proof} 
+The pdf of the univariate Gaussian distribution is given by:
+\begin{align}		
+\varphi(x)&= \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace\,\,\,\,\,\,\,-\infty<x<\infty.		
+\end{align}
+To find the mode i.e. the maximum of the Gaussian distribution, we differentiate the pdf with respect to x and equate it to $0$ to find the critical point where the function is maximum or minimum and then use the second derivative test to ascertain that the function is maximized at that point.(\textit{a function $f$ attains its local maximum at a critical point $x$ if it is twice differentiable at $x$ i.e. $f'(x)=0$ and its second derivative at $x$ is negative i.e. $f''(x) < 0$}).\hfill \break
+\hfill \break
+Differentiating $(1)$ with respect to x,
+\begin{align}
+\dfrac{d}{dx}\,\varphi(x) &= \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace \left(-\frac{1}{2\sigma^2}\right) \left\lbrace2\left(x-\mu\right)\right\rbrace
+\end{align}
+Equating $(2)$ to zero, we get $x=\mu$.\\
+\hfill \break
+To verify that the function is maximized at $\mu$ we differentiate (2) with respect to x,
+\begin{align}
+\dfrac{d^2}{d^2x}\,\varphi(x) &= \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace \left(-\frac{1}{2\sigma^2}\right) \left(2\right) \\
+& \,\,\,\,\,+ \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace \left(-\frac{1}{2\sigma^2}\right)^2 \left\lbrace2\left(x-\mu\right)\right\rbrace^2{\notag}
+\end{align}
+Substituting $x=\mu$ in $(3)$ we get,
+\begin{align}
+\dfrac{d^2}{d^2x}\,\varphi(\mu) &= \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(\mu-\mu\right)^2\right\rbrace \left(-\frac{1}{2\sigma^2}\right) \left(2\right) \\
+& \,\,\,\,\,+ \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(\mu-\mu\right)^2\right\rbrace \left(-\frac{1}{2\sigma^2}\right)^2 \left\lbrace2\left(\mu-\mu\right)\right\rbrace^2{\notag}\\
+&= \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(0\right)^2\right\rbrace \left(-\frac{1}{2\sigma^2}\right) \left(2\right) \\
+& \,\,\,\,\,+ \frac{1}{\sqrt{2\pi\sigma^2}}\, \exp\left\lbrace-\frac{1}{2\sigma^2}\left(0\right)^2\right\rbrace \left(-\frac{1}{2\sigma^2}\right)^2 \left\lbrace2\left(0\right)\right\rbrace^2{\notag}\\
+&= \frac{1}{\sqrt{2\pi\sigma^2}}\,\left(-\frac{1}{2\sigma^2}\right) \left(2\right) + 0\\
+&= -\frac{1}{\sigma^2\sqrt{2\pi\sigma^2}} < 0
+\end{align}
+Since the second derivative of $\varphi$ at $\mu$ is negative i.e $< 0$, the univariate Gaussian distribution is maximized at $\mu$.\\
+\hfill \break
+\textbf{Hence the mode of the univariate Gaussian distribution is} $\mu$.
+\end{proof}	
+\end{flushleft}
+\begin{thebibliography}{9}
+\bibitem{christopherbishop} 
+Christopher M. Bishop. 
+\textit{ Pattern Recognition and Machine Learning}.  
+\textbf{Exercise 1.9}
+\end{thebibliography}
+\end{document}

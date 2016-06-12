@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hevea 2.09">
+<style type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.dd-description{margin:0ex 0ex 1ex 4ex;}
+.dt-description{margin:0ex;}
+.toc{list-style:none;}
+.footnotetext{margin:0ex; padding:0ex;}
+div.footnotetext P{margin:0px; text-indent:1em;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{margin:1em auto 1em 0px;width:50%;}
+.caption{padding-left:2ex; padding-right:2ex; margin-left:auto; margin-right:auto}
+.title{margin:2ex auto;text-align:center}
+.titlemain{margin:1ex 2ex 2ex 1ex;}
+.titlerest{margin:0ex 2ex;}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+.flushleft{text-align:left;margin-left:0ex;margin-right:auto;}
+.flushright{text-align:right;margin-left:auto;margin-right:0ex;}
+div table{margin-left:inherit;margin-right:inherit;margin-bottom:2px;margin-top:2px}
+td table{margin:auto;}
+table{border-collapse:collapse;}
+td{padding:0;}
+.cellpadding0 tr td{padding:0;}
+.cellpadding1 tr td{padding:1px;}
+pre{text-align:left;margin-left:0ex;margin-right:auto;}
+blockquote{margin-left:4ex;margin-right:4ex;text-align:left;}
+td p{margin:0px;}
+.boxed{border:1px solid black}
+.textboxed{border:1px solid black}
+.vbar{border:none;width:2px;background-color:black;}
+.hbar{border:none;height:2px;width:100%;background-color:black;}
+.hfill{border:none;height:1px;width:200%;background-color:black;}
+.vdisplay{border-collapse:separate;border-spacing:2px;width:auto; empty-cells:show; border:2px solid red;}
+.vdcell{white-space:nowrap;padding:0px; border:2px solid green;}
+.display{border-collapse:separate;border-spacing:2px;width:auto; border:none;}
+.dcell{white-space:nowrap;padding:0px; border:none;}
+.dcenter{margin:0ex auto;}
+.vdcenter{border:solid #FF8000 2px; margin:0ex auto;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.marginpar{border:solid thin black; width:20%; text-align:left;}
+.marginparleft{float:left; margin-left:0ex; margin-right:1ex;}
+.marginparright{float:right; margin-left:1ex; margin-right:0ex;}
+.theorem{text-align:left;margin:1ex auto 1ex 0ex;}
+.part{margin:2ex auto;text-align:center}
+</style>
+<title>Univariate Gaussian Distribution is Normalized
+</title>
+</head>
+<body >
+<!--HEVEA command line is: /usr/bin/hevea article.hva GaussianDistributionNormalization_b.tex -->
+<!--CUT STYLE article--><!--CUT DEF section 1 --><table class="title"><tr><td style="padding:1ex"><h1 class="titlemain">Univariate Gaussian Distribution is Normalized</h1><h3 class="titlerest">Premmi</h3></td></tr>
+</table><p>	
+</p><div class="flushleft"> 
+To prove that the univariate Gaussian distribution is normalized, we will first show that it is normalized for a zero-mean Gaussian and extend that result to show that <span style="color:red"><span style="font-style:italic">N</span></span>(<span style="font-style:italic">x</span>&#X2223;&#XB5;, &#X3C3;<sup>2</sup>) is normalized.		
+<br>
+<br>
+The pdf of the zero-mean Gaussian distribution is given by:			
+<table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">		
+&#X3D5;(<span style="font-style:italic">x</span>)=&#XA0;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-size:x-large">&#X221A;</span></td><td class="dcell"><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hbar"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#X3C0;&#X3C3;<sup>2</sup></td></tr>
+</table></td></tr>
+</table></td></tr>
+</table></td><td class="dcell">&#XA0;&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell"><span style="font-style:italic">x</span><sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell">&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;&#X2212;&#X221E;&lt;<span style="font-style:italic">x</span>&lt;&#X221E;.			
+</td></tr>
+</table></td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(1)</td></tr>
+</table></td></tr>
+</table>
+To prove that the above expression is normalized, we have to show that 
+<table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">&#X2212;&#X221E;</td></tr>
+</table></td><td class="dcell">&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell"><span style="font-style:italic">x</span><sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell"><span style="font-style:italic">dx</span>&#XA0;=&#XA0;</td><td class="dcell"><span style="font-size:x-large">&#X221A;</span></td><td class="dcell"><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hbar"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#X3C0;&#X3C3;<sup>2</sup></td></tr>
+</table></td></tr>
+</table></td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(2)</td></tr>
+</table></td></tr>
+</table>
+<p><span style="font-weight:bold">Proof.</span>
+Let
+</p><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">I</span>&#XA0;=&#XA0;</td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">&#X2212;&#X221E;</td></tr>
+</table></td><td class="dcell">&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell"><span style="font-style:italic">x</span><sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell"><span style="font-style:italic">dx</span>
+</td></tr>
+</table></td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(3)</td></tr>
+</table></td></tr>
+</table><p>Squaring the above expression,
+</p><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">I</span><sup>2</sup>&#XA0;=&#XA0;</td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">&#X2212;&#X221E;</td></tr>
+</table></td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">&#X2212;&#X221E;</td></tr>
+</table></td><td class="dcell">&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell"><span style="font-style:italic">x</span><sup>2</sup>&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell"><span style="font-style:italic">y</span><sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell"><span style="font-style:italic">dx</span>&#XA0;<span style="font-style:italic">dy</span>
+</td></tr>
+</table></td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(4)</td></tr>
+</table></td></tr>
+</table><p>
+To integrate this expression we make the transformation from Cartesian coordinates (x, y) to polar coordinates (r, &#X3B8;), which is defined by
+</p><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><span style="font-style:italic">x</span>&#XA0;=&#XA0;<span style="font-style:italic">r</span>&#XA0;&#XA0;&#XA0;<span style="font-style:italic">cos</span>&#XA0;&#X3B8;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(5)</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >
+<span style="font-style:italic">y</span>&#XA0;=&#XA0;<span style="font-style:italic">r</span>&#XA0;&#XA0;&#XA0;<span style="font-style:italic">sin</span>&#XA0;&#XA0;&#X3B8;
+</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(6)</td></tr>
+</table></td></tr>
+</table><p>
+and using the trigonometric identity <span style="font-style:italic">cos</span><sup>2</sup>&#XA0;&#X3B8; + <span style="font-style:italic">sin</span><sup>2</sup>&#XA0; &#X3B8; = 1, we have <span style="font-style:italic">x</span><sup>2</sup> + <span style="font-style:italic">y</span><sup>2</sup> = <span style="font-style:italic">r</span><sup>2</sup>. Also the Jacobian of the change of variables is given by,
+</p><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">x</span>,&#XA0;<span style="font-style:italic">y</span></td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">r</span>,&#XA0;&#X3B8;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+</table></td><td class="dcell">&#XA0;&#XA0;&#XA0;</td></tr>
+</table></td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;&#XA0;</td><td class="dcell"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:center;white-space:nowrap" ><table class="display"><tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">x</span>&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">r</span>&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table class="display"><tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">x</span>&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell">&#X3B8;&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:center;white-space:nowrap" ><table class="display"><tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">y</span>&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">r</span>&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table class="display"><tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell"><span style="font-style:italic">y</span>&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X2202;&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell">&#X3B8;&#XA0;</td><td class="dcell">&#X239E;<br>
+&#X23A0;</td></tr>
+</table></td></tr>
+</table></td></tr>
+</table></td><td class="dcell">&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;</td></tr>
+</table></td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;&#XA0;
+</td><td class="dcell"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">cos</span>&#XA0;&#XA0;&#X3B8;</td><td style="text-align:center;white-space:nowrap" >&#X2212;<span style="font-style:italic">r</span>&#XA0;<span style="font-style:italic">sin</span>&#XA0;&#XA0;&#XA0;&#X3B8;</td><td style="text-align:center;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">sin</span>&#XA0;&#XA0;&#X3B8;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">r</span>&#XA0;<span style="font-style:italic">cos</span>&#XA0;&#X3B8;</td></tr>
+</table></td><td class="dcell">&#X23AA;<br>
+&#X23AA;<br>
+&#X23AA;</td></tr>
+</table></td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >=&#XA0;&#XA0;&#XA0;&#XA0;<span style="font-style:italic">r</span>&#XA0;&#XA0;<span style="font-style:italic">cos</span><sup>2</sup>&#XA0;&#X3B8;&#XA0;+&#XA0;<span style="font-style:italic">r</span>&#XA0;&#XA0;<span style="font-style:italic">sin</span><sup>2</sup>&#XA0;&#X3B8;
+</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >=&#XA0;&#XA0;&#XA0;&#XA0;<span style="font-style:italic">r</span>
+</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+</table></td></tr>
+</table><p>
+using the same trigonometric identity <span style="font-style:italic">cos</span><sup>2</sup>&#XA0;&#X3B8; + <span style="font-style:italic">sin</span><sup>2</sup>&#XA0; &#X3B8; = 1.
+Thus equation (4) can be rewritten as 
+</p><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><span style="font-style:italic">I</span><sup>2</sup>&#XA0;&#XA0;&#XA0;</td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;&#XA0;</td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">2&#X3C0;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">0</td></tr>
+</table></td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">0</td></tr>
+</table></td><td class="dcell">&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">r</span><sup>2</sup></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell"><span style="font-style:italic">r</span>&#XA0;<span style="font-style:italic">dr</span>&#XA0;<span style="font-style:italic">d</span>&#X3B8;&#XA0;
+</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(7)</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;&#XA0;2&#X3C0;</td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">0</td></tr>
+</table></td><td class="dcell">&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">r</span><sup>2</sup></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell"><span style="font-style:italic">r</span>&#XA0;<span style="font-style:italic">dr</span>
+</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(8)</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;&#XA0;2&#X3C0;</td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">0</td></tr>
+</table></td><td class="dcell">&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">u</span></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2</td></tr>
+</table></td><td class="dcell">&#XA0;<span style="font-style:italic">du</span>
+</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(9)</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;&#X3C0;</td><td class="dcell">&#X23A1;<br>
+&#X23A2;<br>
+&#X23A2;<br>
+&#X23A3;</td><td class="dcell">exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">u</span></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell">&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell">&#X2212;2&#X3C3;<sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X23A0;</td><td class="dcell">&#X23A4;<br>
+&#X23A5;<br>
+&#X23A5;<br>
+&#X23A6;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">0</td></tr>
+</table></td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(10)</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >=&#XA0;&#XA0;&#XA0;2&#X3C0;&#X3C3;<sup>2</sup>
+</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&#XA0;&#XA0;&#XA0;&#XA0;(11)</td></tr>
+</table></td></tr>
+</table><p>
+where we have used the change of variables <span style="font-style:italic">r</span><sup>2</sup> = <span style="font-style:italic">u</span>.
+Thus </p><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">I</span>&#XA0;=&#XA0;</td><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell">2&#X3C0;&#X3C3;<sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X23A0;</td><td class="dcell"><sup>1/2</sup>.</td></tr>
+</table><p>
+<br>
+Finally to prove that <span style="color:red"><span style="font-style:italic">N</span></span>(<span style="font-style:italic">x</span>&#X2223;&#XB5;, &#X3C3;<sup>2</sup>) is normalized, we make the tranformation <span style="font-style:italic">y</span> = <span style="font-style:italic">x</span> &#X2212; &#XB5; so that,
+</p><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+&#XA0;&#XA0;&#XA0;&#XA0;&#XA0;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">&#X2212;&#X221E;</td></tr>
+</table></td><td class="dcell">&#XA0;<span style="color:red"><span style="font-style:italic">N</span></span>(<span style="font-style:italic">x</span>&#X2223;&#XB5;,&#XA0;&#X3C3;<sup>2</sup>)&#XA0;<span style="font-style:italic">dx</span>&#XA0;&#XA0;&#XA0;</td></tr>
+</table></td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;&#XA0;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell">2&#X3C0;&#X3C3;<sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X23A0;</td><td class="dcell"><sup>1/2</sup></td></tr>
+</table></td></tr>
+</table></td><td class="dcell">&#XA0;</td><td class="dcell"><span style="font-size:xx-large">&#X222B;</span></td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:left">&#X221E;</td></tr>
+<tr><td class="dcell" style="text-align:left"><br>
+<br>
+</td></tr>
+<tr><td class="dcell" style="text-align:left">&#X2212;&#X221E;</td></tr>
+</table></td><td class="dcell">&#XA0;exp</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell">&#X2212;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">y</span><sup>2</sup></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center">2&#X3C3;<sup>2</sup></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell"><span style="font-style:italic">dy</span></td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell">=&#XA0;&#XA0;&#XA0;</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">I</span></td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell">&#X239B;<br>
+&#X239D;</td><td class="dcell">2&#X3C0;&#X3C3;<sup>2</sup></td><td class="dcell">&#X239E;<br>
+&#X23A0;</td><td class="dcell"><sup>1/2</sup></td></tr>
+</table></td></tr>
+</table></td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >=&#XA0;&#XA0;&#XA0;1
+</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" >&nbsp;</td></tr>
+</table></td></tr>
+</table><p> 
+as required.
+</p><p><br>
+	
+</p></div><!--TOC section id="sec1" References-->
+<h2 id="sec1" class="section">References</h2><!--SEC END --><dl class="thebibliography"><dt class="dt-thebibliography">
+
+<a id="kevinmurphy">[kevinmurphy]</a></dt><dd class="dd-thebibliography"> 
+Kevin P. Murphy. 
+<span style="font-style:italic">Machine Learning: A Probabilistic Perspective</span>. 
+<span style="font-weight:bold">Exercise 2.11</span> Normalization constant for a 1D Gaussian.</dd><dt class="dt-thebibliography"><a id="christopherbishop">[christopherbishop]</a></dt><dd class="dd-thebibliography"> 
+Christopher M. Bishop. 
+<span style="font-style:italic"> Pattern Recognition and Machine Learning</span>. 
+<span style="font-weight:bold">Exercise 1.7</span>
+</dd></dl><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<hr style="height:2"><blockquote class="quote"><em>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</em><a href="http://hevea.inria.fr/index.html"><em>H</em><em><span style="font-size:small"><sup>E</sup></span></em><em>V</em><em><span style="font-size:small"><sup>E</sup></span></em><em>A</em></a><em>.</em></blockquote></body>
+</html>

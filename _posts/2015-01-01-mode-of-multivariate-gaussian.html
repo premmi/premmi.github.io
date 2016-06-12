@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "Mode of Multivariate Gaussian Distribution"
+date:   2016-04-03 14:28:28 +0530
+---
+
+<p>
+<em>Proof. </em>
+The pdf of <strong>$x$</strong> $\sim$ $\mathcal{N} \left(\boldsymbol{\mu},\boldsymbol{\Sigma}\right)$ is given by
+$$ f(x) = \dfrac{1}{\left(2\pi\right)^{D/2}} \dfrac{1}{\vert\boldsymbol{\Sigma}\vert^{1/2}} \exp \left\lbrace -\dfrac{1}{2}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} \left(\mathbf{x} - \boldsymbol{\mu}\right) \right\rbrace
+$$
+where x is <em>d</em> dimensional.
+<br>
+<p style=" text-align: justify; ">
+To find the mode i.e. the maximum of the Gaussian distribution, we differentiate the pdf with respect to <strong>x</strong> and equate it to $0$ to find the critical point where the function is maximum or minimum and then we use the second derivative test to ascertain that the function is maximized at that point.<em>(The second derivative test for a function of more than one variable generalizes to a test based on the eigenvalues of the function's Hessian matrix at the critical point. Assuming that all the second order partial derivatives of the function are continuous on a neighbourhood of a critical point <strong>x</strong>,  then if the eigenvalues of the Hessian at <strong>x</strong> are all <strong>positive</strong>, then <strong>x</strong> is a local <strong>minimum</strong>, if the eigenvalues are all <strong>negative</strong>, then <strong>x</strong> is a local <strong>maximum</strong>, and if some are positive and some negative, then the point is a <strong>saddle point</strong>. If the Hessian matrix is <strong>singular</strong>, then the second derivative test is <strong>inconclusive</strong>.)</em>
+</p>
+
+Differentiating $(1)$ with respect to <strong>x</strong>,
+\begin{align}
+\dfrac{\partial f(\mathbf{x})}{\partial \mathbf{x}} &= \dfrac{1}{\left(2\pi\right)^{D/2}} \dfrac{1}{\vert\boldsymbol{\Sigma}\vert^{1/2}} \exp \left\lbrace -\dfrac{1}{2}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} \left(\mathbf{x} - \boldsymbol{\mu}\right) \right\rbrace \left\lbrace-\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}\right\rbrace \\
+&= -f(\mathbf{x})\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}
+\end{align} 
+
+Equating (2) to zero, we get the critical point
+\begin{align}
+\mathbf{x} &= \boldsymbol{\mu}
+\end{align}
+
+To verify that the pdf is maximized at (4), we evaluate the Hessian matrix at $\boldsymbol{\mu}$ and check that it is negative definite.<br>
+
+Differentiating (3) with respect to $\mathbf{x}$,
+\begin{align}
+\dfrac{\partial^2 f(\mathbf{x})}{\partial \mathbf{x} \partial \mathbf{x}^T} &= \dfrac{\partial}{\partial \mathbf{x}}\left(\dfrac{\partial f(\mathbf{x})}{\partial  \mathbf{x}^T}\right)\\
+&= \dfrac{\partial}{\partial \mathbf{x}}\left(-f(\mathbf{x})\left(\mathbf{x}   - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}}\right)\\
+&= f(\mathbf{x})\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} - f(\mathbf{x})\boldsymbol{\Sigma^{-1}}\\
+&= f(\mathbf{x})\left(\mathbf{\Sigma^{-1}\left(x-\boldsymbol{\mu}\right)}\left(\mathbf{x} - \boldsymbol{\mu}\right)^T \boldsymbol{\Sigma^{-1}} - \boldsymbol{\Sigma^{-1}}\right)
+\end{align}
+Evaluating (8) at $\mathbf{x} = \boldsymbol{\mu}$ we get,
+\begin{align}
+\dfrac{\partial^2 f(\mathbf{x})}{\partial \mathbf{x} \partial \mathbf{x}^T}\Bigr|_{\mathbf{x}=\boldsymbol{\mu}} &= -f(\boldsymbol{\mu}) \boldsymbol{\Sigma^{-1}}
+\end{align}
+<p>
+We know that the covariance matrix $\boldsymbol{\Sigma}$ is positive definite, hence its inverse $\boldsymbol{\Sigma^{-1}}$ is also positive definite.<em>(since if $\lambda$ is an eigenvalue of $\boldsymbol{\Sigma}$, then 1/$\lambda$ is the corresponding eigenvalue of $\boldsymbol{\Sigma^{-1}}$. As $\lambda$ is positive, so is 1/$\lambda$ which implies that all the eigenvalues of $\boldsymbol{\Sigma^{-1}}$ are positive.)</em>
+</p>
+<p>
+We know that $f(\boldsymbol{\mu})$ is positive everywhere, since the pdf is positive, and hence $-\boldsymbol{\Sigma^{-1}}$ is negative definite which proves that the pdf is maximized at $\mathbf{x} = \boldsymbol{\mu}$.<em>(if $\mathbf{Ax} = \lambda\mathbf{x}$, then $-\mathbf{Ax} = -\lambda\mathbf{x}$)</em>
+
+<strong>Hence the mode of the multivariate Gaussian distribution is $\boldsymbol{\mu}$.</strong>
+</p>

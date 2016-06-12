@@ -1,0 +1,11 @@
+The mean of the univariate Gaussian distribution is given by: 
+\begin{align}
+\E\left[x\right] &= \,\,\,\int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left\lbrace-\frac{1}{2\sigma^2}\left(x-\mu\right)^2\right\rbrace x\,dx\\
+\end{align}  
+Changing the variables using $y = x - \mu$, the above expression becomes
+\begin{align}
+\E\left[x\right] &= \,\,\,\int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)\left(y+\mu\right)dy\\
+&=\,\,\,\int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)y\,dy \notag\\\ &\,\,\,\,\,\,\,\,+ \int_{-\infty}^{\infty} \left(\frac{1}{2\pi\sigma^2}\right)^{1/2}\exp\left(-\frac{1}{2\sigma^2}y^2\right)\mu\,dy\\
+&= \,\,\,\mu
+\end{align}
+The first term in the sum is an odd integrand and hence it integrates to 0. In the second term, we can pull the constant $\mu$ outside the integral and we are left with the normalized Gaussian distribution which integrates to 1.
