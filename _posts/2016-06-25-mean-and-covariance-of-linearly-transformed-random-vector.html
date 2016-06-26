@@ -1,0 +1,169 @@
+---
+layout: post
+title:  "Mean and Covariance of Linearly Transformed Random Vector"
+date:   2016-06-25 14:28:28 +0130
+---
+Suppose $f()$ is a vector valued function given by:
+\begin{align}
+\mathbf{y = }f(\mathbf{x}) = \mathbf{Ax + b}
+\end{align}
+where the dimension of $\mathbf{y}$ is $\mathfrak{m} \times 1$, $\mathbf{A}$ is $\mathfrak{m} \times \mathfrak{n}$, $\mathbf{x}$ is $\mathfrak{n} \times 1$ and $\mathbf{b}$ is $\mathfrak{m} \times 1$.
+<br>
+<br>
+The mean of $\mathbf{y}$ is given by:
+\begin{align}
+\mathbb{E}[\mathbf{y}] &= \mathbf{A\boldsymbol{\mu}} + \mathbf{b}
+\end{align}
+where $\boldsymbol{\mu} = \mathbb{E}[\mathbf{x}]$.
+<br>
+The covariance of $\mathbf{y}$ is given by:
+\begin{align}
+\mathrm{cov}\left(\mathbf{y}\right) &= \mathbf{A\boldsymbol{\Sigma}A}\! ^\mathrm{T}
+\end{align}
+where $\boldsymbol{\Sigma} = $ $\mathrm{cov}\left(\mathbf{x}\right)$.
+<br>
+<em>Proof. </em>: 
+Let 
+\begin{align}
+\mathbf{x} &= \begin{bmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_n
+\end{bmatrix}
+\end{align}
+be a random vector with mean 
+\begin{align}
+\boldsymbol{\mu} &= \begin{bmatrix}
+\mu_1 \\ \mu_2 \\ \vdots \\ \mu_n
+\end{bmatrix}
+\end{align}
+and covariance 
+\begin{align}
+\boldsymbol \Sigma = \mathrm{cov}(\mathbf{x}) &= \begin{bmatrix}
+\mathrm{cov}\left(x_1,x_1\right) & \cdots & \mathrm{cov}\left(x_1,x_n\right)\\
+\vdots & \ddots & \vdots \\
+\mathrm{cov}\left(x_n,x_1\right) & \cdots & \mathrm{cov}\left(x_n,x_n\right)
+\end{bmatrix} \\ \notag \\
+&= \begin{bmatrix}
+\mathbb{E}[(x_1-\mu_1)^2] & \cdots & \mathbb{E}[(x_1-\mu_1)(x_n-\mu_n)]\\
+\vdots &\ddots & \vdots \\
+\mathbb{E}[(x_n-\mu_n)(x_1-\mu_1)] & \cdots & \mathbb{E}[(x_n-\mu_n)^2]
+\end{bmatrix} \\ \notag \\
+&= \mathbb{E}\begin{bmatrix}
+(x_1-\mu_1)^2 & \cdots & (x_1-\mu_1)(x_n-\mu_n)\\
+\vdots &\ddots & \vdots \\
+(x_n-\mu_n)(x_1-\mu_1) & \cdots & (x_n-\mu_n)^2
+\end{bmatrix} \\ \notag \\
+&= \mathbb{E} \begin{bmatrix}
+\begin{bmatrix}
+x_1-\mu_1 \\
+\vdots \\
+x_n-\mu_n
+\end{bmatrix} & \begin{bmatrix}
+x_1-\mu_1 & \cdots & x_n-\mu_n
+\end{bmatrix}
+\end{bmatrix} \\ \notag \\
+&= \mathbb{E}[(\mathbf{x-\boldsymbol \mu})\,(\mathbf{x-\boldsymbol \mu})^\mathrm{T} ]
+\end{align}
+(8) follows from the fact that taking expectation of a matrix is equivalent to taking its expectation elementwise. Also, (9) follows from the fact that for any vector $\mathbf{a}\in \mathbb{R}^n$,
+\begin{align*}
+\mathbf{aa}^\mathrm{T} &= \begin{bmatrix}
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{bmatrix} \begin{bmatrix}
+a_1 & a_2 & \cdots a_n
+\end{bmatrix} = \begin{bmatrix}
+a_1^2 & a_1a_2 & \cdots & a_1a_n \\
+a_2a_1 & a_2^2 & \cdots & a_2a_n \\
+\vdots & \vdots & \ddots & \vdots \\
+a_na_1 & a_na_2 & \cdots & a_n^2 
+\end{bmatrix} \\
+\end{align*}
+Proving the mean of $\mathbf{y}$ is straightforward and is as follows:
+\begin{align}
+\mathbb{E}[\mathbf{y}] &= \mathbb{E}[\mathbf{Ax+b}] \\ 
+&= \mathbb{E}[\mathbf{Ax}] + \mathbb{E}[\mathbf{b}] \\ 
+&= \mathbf{A}\mathbb{E}[\mathbf{x}] + \mathbf{b} \\
+&= \mathbf{A \boldsymbol \mu + b}
+\end{align}
+which proves (2). (12) follows from linearity of expectations.
+<br>
+Using (10) the covariance of $\mathbf{y}$ can be written as:
+\begin{align}
+\mathrm{cov}(\mathbf{y}) &= \mathbb{E}[(\mathbf{y}-\mathbb{E}[\mathbf{y}])\, (\mathbf{y}-\mathbb{E}[\mathbf{y}])^\mathrm{T}] \\
+&= \mathbb{E}[(\mathbf{Ax+b}- \mathbf{A \boldsymbol \mu - b})\, (\mathbf{Ax+b}- \mathbf{A \boldsymbol \mu - b})^\mathrm{T}] \\
+&= \mathbb{E}[(\mathbf{Ax}- \mathbf{A \boldsymbol \mu})\, (\mathbf{Ax}- \mathbf{A \boldsymbol \mu})^\mathrm{T}] \\
+&= \mathbb{E}[(\mathbf{Ax}- \mathbf{A \boldsymbol \mu})\, (\mathbf{x}^\mathrm{T}\mathbf{A}^\mathrm{T}- \mathbf{\boldsymbol \mu}^\mathrm{T}\mathbf{A}^\mathrm{T})] \\
+&= \mathbb{E}[\mathbf{A(x - \boldsymbol \mu})\, (\mathbf{x}^\mathrm{T}- \mathbf{\boldsymbol \mu}^\mathrm{T})\mathbf{A}^\mathrm{T}] \\
+&= \mathbf{A}\,\mathbb{E}[\mathbf{(x - \boldsymbol \mu})\, (\mathbf{x}^\mathrm{T}- \mathbf{\boldsymbol \mu}^\mathrm{T})]\,\mathbf{A}^\mathrm{T} \\
+&= \mathbf{A}\,\mathbb{E}[\mathbf{(x - \boldsymbol \mu})\, (\mathbf{x}- \mathbf{\boldsymbol \mu})^\mathrm{T}]\,\mathbf{A}^\mathrm{T} \\
+&= \mathbf{A\boldsymbol{\Sigma}A}\! ^\mathrm{T} 
+\end{align}
+which proves (3). (16) follows from (14) and (21) follows from (6) and (10).
+<br>
+<span style="font-size: 20px;float:right;">&#9633;</span><br>
+Suppose $f()$ is a scalar valued function given by:
+\begin{align}
+y = f(\mathbf{x}) = \mathbf{a^\mathrm{T}x} + b
+\end{align}
+where the dimension of $y$ is $1 \times 1$ (scalar), $\mathbf{a}$ is $\mathfrak{n} \times 1$, $\mathbf{x}$ is $\mathfrak{n} \times 1$ and $b$ is $1 \times 1$ (scalar).
+<br>
+The mean of $y$ is given by:
+\begin{align}
+\mathbb{E}[y] &= \mathbf{a^\mathrm{T}\boldsymbol{\mu}} + b
+\end{align}
+where $\boldsymbol{\mu} = \mathbb{E}[\mathbf{x}]$.
+<br>
+<br>
+The variance of $y$ is given by:
+\begin{align}
+\mathrm{var}\left(y\right) &= \mathbf{a^\mathrm{T}\boldsymbol{\Sigma}a}
+\end{align}
+where $\boldsymbol{\Sigma} = $ $\mathrm{cov}\left(\mathbf{x}\right)$.
+<br>
+<em>Proof. </em>: 
+The mean of $y$ is:
+\begin{align}
+\mathbb{E}[y] &= \mathbb{E}[\mathbf{a^\mathrm{T}x} + b]\\
+&= \mathbb{E}[\mathbf{a^\mathrm{T}x}] + \mathbb{E}[b] \\
+&= \mathbb{E}[a_1x_1 + a_2x_2 + \cdots + a_nx_n] + \mathbb{E}[b] \\
+&= a_1\mathbb{E}[x_1] + a_2\mathbb{E}[x_2] + \cdots + a_n\mathbb{E}[x_n] + b \\
+&= a_1\mu_1 + a_2\mu_2 + \cdots + a_n\mu_n + b \\
+&= \begin{bmatrix}
+a_1 & a_2 & \cdots & a_n 
+\end{bmatrix}
+\begin{bmatrix}
+\mu_1 \\
+\mu_2 \\
+\vdots \\
+\mu_n \\
+\end{bmatrix} + b \\
+&= \mathbf{a^{\mathrm{T}} \boldsymbol \mu} + b
+\end{align}
+which proves (24).
+<br>
+The variance of y is:
+\begin{align}
+\mathrm{var}(y) &= \mathrm{var}(\mathbf{a^{\mathrm{T}} x} + b) \\
+&= \mathrm{var}(\mathbf{a^{\mathrm{T}} x}) \\
+&= \mathrm{var}(a_1x_1 + a_2x_2 + \cdots + a_nx_n) \\
+&= \mathrm{var}(a_1x_1)  + \cdots +  \mathrm{var}(a_nx_n) + 2\sum_{i \neq j}\mathrm{cov}(a_ix_i,a_jx_j) \\
+&= a_1^2\,\mathrm{var}(x_1)  + \cdots + a_n^2\, \mathrm{var}(x_n) + 2\sum_{i \neq j}\mathrm{cov}(a_ix_i,a_jx_j) \\
+&= \begin{bmatrix}
+a_1 & \cdots & a_n
+\end{bmatrix}
+\begin{bmatrix}
+\mathrm{cov}\left(x_1,x_1\right) & \cdots & \mathrm{cov}\left(x_1,x_n\right)\\
+\vdots & \ddots & \vdots \\
+\mathrm{cov}\left(x_n,x_1\right) & \cdots & \mathrm{cov}\left(x_n,x_n\right)
+\end{bmatrix}
+\begin{bmatrix}
+a_1 \\
+\vdots \\
+a_n
+\end{bmatrix} \\
+&= \mathbf{a^{\mathrm{T}} \Sigma a}
+\end{align}
+where $\mathbf{\Sigma =\, } \mathrm{cov}(\mathbf{x}).$ (34) follows from the fact that adding a constant merely shifts the distribution and does not affect its spread and hence does not change its variance. (36) follows from the variance of the sum of random variables i.e., $\mathrm{var}(x+y) = \mathrm{var}(x) + \mathrm{var}(y) + 2 \,\mathrm{cov}(x,y)$.Note also that $\mathrm{var}(x_1) = \mathrm{cov}(x_1,x_1).$
+<span style="font-size: 20px;float:right;">&#9633;</span><br>
+<br>

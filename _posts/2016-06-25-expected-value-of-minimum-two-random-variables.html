@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "Expected Value of The Minimum of Two Random Variables"
+date:   2016-06-25 14:28:28 +0130
+---
+<h1 class="textbf">Suppose X, Y are two points sampled independently and uniformly at random from the interval [0, 1]. What is the expected location of the left most point?</h1>
+
+The leftmost point is the minimum of the random variables X and Y. To find the expected location of the leftmost point, we find the pdf(probability distribution function) of  min(X, Y) and calculate the expectation using the pdf. We find the pdf by differentiating the cdf (cumulative distributive function).
+
+Let $\mathbf{M \boldsymbol \sim min\left(X, Y\right)}$, where $\mathbf{X, Y \boldsymbol \sim Unif(0, 1)}.$ The pdf of this uniform distribution is given by:
+\begin{align}
+f_X(x) = f_Y(x) =
+  \begin{cases} 
+      \hfill \,\, 1    \hfill & if \,\,  0 < x < 1, \\
+      \hfill \,\, 0    \hfill & otherwise. \\
+  \end{cases}
+\end{align}
+The cdf is the accumulated area under the pdf, which for this uniform distribution is as follows:
+\begin{align}
+F_X(x) = F_Y(x) =
+  \begin{cases} 
+      \hfill \,\, 0    \hfill & if \,\,x <= 0, \\
+      \hfill \,\, x    \hfill & if \,\,0 < x < 1, \\
+      \hfill \,\, 1    \hfill & if \,\,x >= 1. \\
+  \end{cases}
+\end{align}
+The cdf of $\mathbf{min\left(X, Y\right)}$ is given by:
+\begin{align}
+F_M(m) &= P(M <= m) \\
+&= 1 - P(M > m) \\
+&= 1 - P(X > m, Y > m) \\
+&= 1 - P(X > m) P(Y > m) \\
+&= 1 - [\left\lbrace1 - P(X <= m)\right\rbrace \left\lbrace1 - P(Y <= m)\right\rbrace] \\
+&= 1 - [\left\lbrace1 - F_X(m)\right\rbrace \left\lbrace1 - F_Y(m)\right\rbrace] \\
+&= 1 - [(1 - m)^2] \\
+&= 1 - (1-2m+m^2) \\
+&= 2m-m^2
+\end{align}
+The pdf of $\mathbf{min\left(X, Y\right)}$ (which is obtained by differentiating the cdf) is given by:
+\begin{align}
+\frac{d}{dm} F_M(m) &= \frac{d}{dm} \left(2m - m^2\right) \\
+f_M(m) &= 2 - 2m
+\end{align}
+Since (13) is the pdf of $\mathbf{min(X,Y)}$, the expected location of the leftmost point is given by the expectation of $\mathbf{M \boldsymbol \sim min\left(X, Y\right)}$ which is given by:
+\begin{align}
+\mathbb{E}[\mathbf{M}] &= \int_0^1 m f_M(m)\, dm \\
+&= \int_0^1 m (2-2m)\,dm \\
+&= \int_0^1 \left(2m-2m^2\right)dm \\
+&= 2\left[\frac{m^2}{2}-\frac{m^3}{3}\right]_0^1 \\
+&= 2\left[\frac{1}{2}-\frac{1}{3}\right] \\
+&= 2 \times \frac{1}{6} \\
+&= \frac{1}{3}
+\end{align}
+So, when two points X, Y are sampled independently and uniformly at random from the interval [0, 1], the expected location of the left most point is $\mathbf{1/3}$.
+
+<br>
+<br>
+<h4>References:</h4>
+Kevin P. Murphy. 
+<em>Machine Learning: A Probabilistic Perspective. </em>
+$\textbf{Exercise 2.17}$ <br> Expected value of the minimum.

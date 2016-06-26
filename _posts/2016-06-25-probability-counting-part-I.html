@@ -1,0 +1,130 @@
+---
+layout: post
+title:  "Probability Problems on Counting - Part I"
+date:   2016-06-25 14:28:28 +0530
+---
+<p>
+<h1 class="textbf">How many ways are there to permute the letters in the word MISSISSIPPI?</h1>
+   There are $\mathbf{10!}$ ways to start with and then we adjust for overcounting by dividing by $\mathbf{4!4!2!}$ to account for the fact that the I's can be permuted among themselves in any way and likewise for the S's and P's. So the total number of ways the word MISSISSIPPI can be permuted $= \mathbf{\dfrac{10!}{4!4!2!}}$.
+   </p>
+   <hr>
+   <br>
+   <p>
+   $\textbf{How many 7-digit phone numbers are possible, assuming that the first digit cannot be a 0 or a 1?}$
+   <br>
+   <br>
+   There are $\mathbf{10}$ (digits 0-9) possibilities for digits from 2 to 7. The 1st digit has $\mathbf{8}$ possibilities (digits 2-9). Hence the total number of 7-digit phone numbers possible where the 1st digit cannot be a 0 or a 1 is $\mathbf{8\, \times \,10^6}$.
+   </p>
+   <p>
+   <h1 class="textbf">Re-solve the above problem, except now assume also that the phone number is not allowed to start 
+   with 911 (since this is reserved for emergency use, and it would not be desirable for the
+   system to wait to see whether more digits were going to be dialed after someone has
+   dialed 911).}</h1>
+   There are $\mathbf{10^4}$ 7-digit phone numbers starting with 911 (since the first 3 digits are fixed and the last four digits each have 10 possibilities each). So the total number of 7-digit phone numbers that cannot start with $\mathbf{911}$ is $\mathbf{8\, \times \,10^6 - 10^4}$.
+   </p>
+   <hr>
+   <br>
+   <p>
+
+   <h1 class="textbf">Fred is planning to go out to dinner each night of a certain week, Monday through
+     Friday, with each dinner being at one of his ten favorite restaurants.</h1>
+   <ol type="a">
+     <li>
+     <h1 class="textbf">How many possibilities are there for Fred's schedule of dinners for that Monday
+       through Friday, if Fred is not willing to eat at the same restaurant more than once?</h1>
+     <p>
+On Monday there are 10 restaurants to choose from, Tuesday 9 restaurants and so on till Friday. So the total number of possibilities for Fred's schedule of dinners for Monday through Friday is $\mathbf{10 \times 9 \times 8 \times 7 \times 6}$.
+</p>
+     </li>
+     <li>
+     <h1 class="textbf">
+       How many possibilities are there for Fred's schedule of dinners for that Monday
+       through Friday, if Fred is willing to eat at the same restaurant more than once, but is
+       not willing to eat at the same place twice in a row (or more)?
+     </h1>
+
+     <p>
+On Monday Fred can eat at any of the 10 restaurants. Since he does not want to eat at the same restaurant 2 or more times in a row, on Tuesday he can eat at any of the restaurants except the one he ate at on Monday. Similarly for the other days he can eat at any of the restaurants except the one he ate at the previous day. So from Tuesday to Friday he can eat at 9 restaurants. So his total number of possibilities are $\mathbf{10 \times 9 \times 9 \times 9 \times 9}$.
+</p>
+     </li>
+   </ol>
+   </p>
+
+   <hr>
+   <br>
+
+   <p>
+   <h1 class="textbf">A round-robin tournament is being held with n tennis players; this means that every
+     player will play against every other player exactly once.</h1>
+   </p>
+   <p>
+   <ol type="a">
+     <li>
+     <h1 class="textbf">How many possible outcomes are there for the tournament (the outcome lists out
+who won and who lost for each game)?</h1>
+     <p>
+
+There are $\mathbf{\frac{n\,(n-1)}{2}}$ (see (b)) games played in total. Each of those games have 2 possible outcomes. So the total number of possible outcomes = $
+\mathbf{\left(2\right)^{\frac{n\,(n-1)}{2}}}$.
+     </p>
+     <li>
+     <h1 class="textbf">How many games are played in total?</h1>
+     <p>
+     Each game is played between two players. So the total number of games played is the number of ways 2 players could be chosen from n players i.e., $$\mathbf{\binom{n}{2} = \frac{n!}{(n-2)!\,2!} = \frac{n\,(n-1)}{2}}.$$ 
+   </p>
+   </li>
+   </ol>
+   </p>
+
+   <hr>
+   <br>
+   <p>
+   <h1 class="textbf">
+A knock-out tournament is being held with $\mathbf{2^n}$ tennis players. This means that for each
+round, the winners move on to the next round and the losers are eliminated, until only
+one person remains. For example, if initially there are $\mathbf{2^4 = 16}$ players, then there are
+8 games in the first round, then the 8 winners move on to round 2, then the 4 winners
+move on to round 3, then the 2 winners move on to round 4, the winner of which is
+declared the winner of the tournament.(There are various systems for determining who
+plays whom within a round, but these do not matter for this problem.)
+     </h1>
+     <ol type="a">
+       <li>
+       <h1 class="textbf"> How many rounds are there?  </h1>
+       <p>
+In each round, half the number of players who played in that round are eliminated and the other half move on to the next round till only one person remains. So the total number of rounds in the number of times the number of players a tournament started with can be divided by 2 till only 1 remains i.e., $\mathbf{2^{n}}$ should be divided by $\mathbf{2\,,n}$ times before we get 1. So there are $\mathbf{n}$ rounds in total.
+       </p>
+       </li>
+       <li>
+       <h1 class="textbf">Count how many games in total are played, by adding up the numbers of games
+played in each round.</h1>
+<p>
+In each round half the number of players are eliminated. So each round has half the number of games of the previous round. So the total number of games played (where each term in the summation denotes the number of games played in each subsequent round starting from the first round): 
+\begin{align}
+&= \mathbf{\frac{2^n}{2} + \frac{2^n}{2^2} + \cdots + \frac{2^n}{2^n}}\\
+&= \mathbf{2^n\left(\frac{1}{2} + \frac{1}{2^2} + \cdots + \frac{1}{2^n}\right)} \\
+&= \mathbf{2^n \left(\frac{1}{2}\right)\!\left\lbrace \frac{1 - \left(\frac{1}{2}\right)^{\!n}}{1 - \frac{1}{2}}\right\rbrace} \\
+&= \mathbf{2^n \left(\frac{1}{2}\right)\!\left\lbrace \frac{1 - \left(\frac{1}{2}\right)^{\!n}}{\frac{1}{2}}\right\rbrace} \\
+&= \mathbf{2^n \left\lbrace 1 - \left(\frac{1}{2}\right)^{\!\!\!n} \right\rbrace} \\
+&= \mathbf{2^n \left(\frac{2^n - 1}{2^n}\right)} \\
+&= \mathbf{2^n - 1}
+\end{align} 
+(3) follows from the summation of the geometric series.
+</p>
+<li>
+<h1 class="textbf"> 
+
+Count how many games in total are played, this time by directly thinking about it
+without doing almost any calculation.
+Hint: How many players need to be eliminated?
+</h1>
+<p>
+The winner is determined when $\mathbf{2^n - 1}$ players are eliminated. In each game one person is eliminated, so there are a total of $\mathbf{2^n - 1}$ games played.
+</p>
+</li>
+<br>
+<br>
+<h4>References:</h4>
+Joseph K. Blitzstein and Jessica Hwang. 
+<em>Introduction to Probability</em>
+$\textbf{Exercises: Counting}$
