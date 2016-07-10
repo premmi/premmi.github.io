@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "Bernoulli Distribution - Mean, Variance, Entropy"
+date:   2016-07-10 14:28:28 +0530
+---
+The <em><strong>Bernoulli distribution</strong></em> is a distribution of a single binary random variable.
+Let $x \in \left\lbrace0,1\right\rbrace$ be a binary random variable. The probability distribution function (pdf) of $x$ can be  parameterized as follows:
+\begin{align}
+p(x=1 \mid \theta) &= \theta \\
+p(x=0 \mid \theta) &= 1 - \theta
+\end{align}
+where $0 \leq \theta \leq 1 $. This means that $x$ takes the value $1$ with probability $\theta$ and the value $0$ with probability $1-\theta$.
+<br>
+The distribution can also be written as:
+\begin{align}
+\mathrm{Bern}(x \mid \theta) = \theta^x (1-\theta)^{1-x}
+\end{align}
+<em><strong>Proposition 1</strong></em>  <em>The Bernoulli distribution is normalized.</em>
+<br>
+<em>Proof. </em>
+\begin{align}
+\sum_{x\, \in \,\left\lbrace0,1\right\rbrace} p(x \mid \theta) &= p(x=0 \mid \theta) + p(x=1 \mid \theta) \\
+&= 1-\theta + \theta \\
+&= 1
+\end{align}
+<span style="font-size: 20px;float:right;">&#9633;</span><br>
+<em><strong>Proposition 2</strong></em> <em>The mean of a Bernoulli distributed binary random  variable $x$ is $\theta.$ </em>
+<br>
+<em>Proof. </em>
+\begin{align}
+\mathbb{E}[x] &= \sum_{x\, \in \,\left\lbrace0,1\right\rbrace} x\, p(x \mid \theta)\\
+&= 0 \cdot p(x=0 \mid \theta) + 1 \cdot p(x=1 \mid \theta) \\
+&= \theta
+\end{align}
+<span style="font-size: 20px;float:right;">&#9633;</span><br>
+
+<em><strong>Proposition 3</strong></em> <em>The variance of a Bernoulli distributed binary random variable $x$ is $\theta\, (1-\theta).$ </em>
+
+<br>
+<em>Proof. </em>
+\begin{align}
+\mathrm{var}[x] &= \mathbb{E}[(x - \mathbb{E}[x])^2] \\
+&= \mathbb{E}[(x - \theta)^2] \\
+&= \sum_{x\, \in \,\left\lbrace0,1\right\rbrace} (x-\theta)^2 \, p(x \mid \theta) \\
+&= \theta^2\, p(x=0 \mid \theta) + (1-\theta)^2\, p(x=1 \mid \theta) \\
+&= \theta^2\, (1-\theta) + (1-\theta)^2\, \theta \\
+&= (1-\theta)\, [\theta^2 + (1-\theta)\,\theta] \\
+&= (1-\theta)\, (\theta^2 + \theta -\theta^2) \\
+&= \theta \, (1-\theta)
+\end{align}
+<span style="font-size: 20px;float:right;">&#9633;</span><br>
+
+<em><strong>Proposition 4</strong></em> <em>The entropy $\mathbf{H}[x]$ of a Bernoulli distributed binary random variable $x$ is given by : </em>
+
+\begin{align}
+\mathbf{H}[x] = -\theta \, ln\, \theta - (1-\theta)\, ln \,(1-\theta).
+\end{align}
+<br>
+<em>Proof. </em>
+\begin{align}
+\mathbf{H}[x] &= -\sum_{x\, \in \,\left\lbrace0,1\right\rbrace} p(x \mid \theta)\, ln\, p(x \mid \theta)\\
+&= - p(x = 0 \mid \theta)\, ln\, p(x = 0 \mid \theta) - p(x = 1 \mid \theta)\, ln\, p(x = 1 \mid \theta) \\
+&= - (1-\theta)\, ln\,(1-\theta) - \theta\,ln\,\theta
+\end{align}
+<span style="font-size: 20px;float:right;">&#9633;</span><br>
+

@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "Inverse Gamma Density"
+date:   2016-07-10 14:28:28 +0530
+---
+
+Let $X \sim  \mathrm{Ga}(a,b)$, i.e.,
+\begin{align}
+\mathrm{Ga}\left(x \mid a,b\right) = \frac{b^a}{\Gamma(a)} x^{a-1} e^{-xb}
+\end{align}
+for $x \geq 0$ and $a,b > 0$.
+<br>
+Let $Y = 1/X$. Show that $Y \sim  \mathrm{IG}(a,b)$, i.e.,
+\begin{align}
+\mathrm{IG}\left(y \mid \mathrm{shape}=a,\mathrm{scale}=b\right) = \frac{b^a}{\Gamma(a)} y^{-(a+1)} e^{-b/y}.
+\end{align}
+for $y > 0$ and $a,b > 0$.
+<br>
+<br>
+<em>Proof. </em>
+\begin{align}
+y &= \dfrac{1}{x} \Rightarrow x = \dfrac{1}{y}
+\end{align}
+Differentiating (3) w.r.t $y$,
+\begin{align}
+\dfrac{dx}{dy} &= - \,\dfrac{1}{y^2}
+\end{align}
+The cdf (cumulative distribution function) of (2) is given by
+\begin{align}
+\mathrm{F}_Y(y) &= \mathrm{P}(Y \leq y) \\
+&= \mathrm{P}\left(\frac{1}{X} \leq y\right) \\
+&= \mathrm{P}\left(\frac{1}{y} \leq X\right) \\
+&= \mathrm{P}\left(X \geq \frac{1}{y}\right) \\
+&= 1 - \mathrm{P}\left(X < \frac{1}{y}\right) \\
+&= 1 - \mathrm{F}_X\!\left(\dfrac{1}{y}\right)
+\end{align}
+Differentiating both sides of (10) w.r.t $y$,
+\begin{align}
+\frac{d}{dy} \mathrm{F}_Y(y) &= \frac{d}{dy} \left[1 - \mathrm{F}_X\!\left(\dfrac{1}{y}\right)\right] \\
+f_Y(y) &= \frac{d}{dx} \left[1 - \mathrm{F}_X\!\left(\dfrac{1}{y}\right)\right] \cdot \frac{dx}{dy} \\
+&= -f_X\left(\frac{1}{y}\right) \cdot  \left(-\,\frac{1}{y^2}\right) \\
+&= \frac{b^a}{\Gamma(a)} \left(\frac{1}{y}\right)^{a-1} e^{-b/y} \cdot  \left(\,\frac{1}{y^2}\right) \\
+&= \frac{b^a}{\Gamma(a)} \left(\frac{1}{y}\right)^{a+1} e^{-b/y} \\
+&= \frac{b^a}{\Gamma(a)} y^{-(a+1)} e^{-b/y}
+\end{align}
+<span style="font-size: 20px;float:right;">&#9633;</span><br>
+<br>
+<h4>References:</h4>
+Kevin P. Murphy. 
+<em>Machine Learning: A Probabilistic Perspective </em>
+<br>
+Exercise 2.10  Deriving the inverse gamma density.
+
