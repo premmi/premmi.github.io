@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "Maximum Entropy Configuration of Discrete Random Variable"
+date:   2016-07-23 14:28:28 +0130
+---
+<h1 class="textbf">
+
+Suppose $X$ is a discrete random variable that takes $k$ different values with the probability that $X = x_i$ defined to be $p(X = x_i) = p_i$. 
+</h1>
+The entropy of the random variable $X$ is given by:
+\begin{align}
+\mathbf{H}[p] = - \sum_i p(x_i)\, \mathrm{ln}\, p(x_i)
+\end{align}
+The maximum entropy configuration can be found by maximizing $\mathbf{H}$ using a Lagrange Multiplier to enforce the normalization constraint on the probabilities. Thus we maximize,
+\begin{align}
+\widetilde{\mathrm{H}} &= - \sum_i p(x_i)\, \mathrm{ln}\, p(x_i) + \lambda \left(\sum_i p(x_i) - 1\right) \\
+\dfrac{\partial \widetilde{\mathrm{H}}}{\partial p(x_i)} &= -1 - \mathrm{ln}\, p(x_i) + \lambda
+\end{align}
+for all $i$ from 1 to $k$.
+When $\widetilde{\mathrm{H}}$ is maximized, $\dfrac{\partial \widetilde{\mathrm{H}}}{\partial p(x_i)} = 0$. So, from (3),
+\begin{align}
+-1 - \mathrm{ln}\, p(x_i) + \lambda &= 0 \\
+-1 + \lambda &= \mathrm{ln}\, p(x_i) \\
+p(x_i) &= e^{\lambda - 1}
+\end{align}
+Also,
+\begin{align}
+\sum_i p(x_i) &= 1 
+\end{align}
+From (6),
+\begin{align}
+k p(x_i) &= 1 \\
+p(x_i) &= \dfrac{1}{k}
+\end{align}
+which means all $p(x_i)$ are equal, which shows that the discrete distribution with maximum entropy is the $\textbf{uniform distribution}.$
+<br>
+The corresponding value of entropy is given by,
+\begin{align}
+\mathbf{H} &= - \sum_i \dfrac{1}{k}\, \mathrm{ln}\, \dfrac{1}{k} \\
+&= k \cdot - \dfrac{1}{k}\, \mathrm{ln}\, \dfrac{1}{k} \\
+&= ln\,k
+\end{align}
+To verify that (9), is indeed the value that maximises the entropy, we evaluate the second derivative of the entropy which gives,
+\begin{align}
+\dfrac{\partial^2 \widetilde{\mathrm{H}}}{\partial p(x_i) p(x_j)} &= - I_{ij} \dfrac{1}{p_i} = -k I_{ij}
+\end{align}
+where $I_{ij}$ is the identity matrix. Since the second derivative is negative, we know that the function indeed attains a maximum.

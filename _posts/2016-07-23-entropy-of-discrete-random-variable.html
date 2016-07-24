@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Entropy of Discrete Random Variable"
+date:   2016-07-23 14:28:28 +0130
+---
+<h1 class="textbf">
+  Suppose we want to quantify the information we receive when we observe a particular value of a discrete random variable $x$.</h1>
+
+The amount of information we receive can be viewed as the "degree of surprise" on learning the value of $x$. For example, if we were told that an earthquake has occurred in Manhattan we would be more surprised (hence would receive more information) than if we were just told that Manhattan is bitterly cold during winter (which has no surprise and hence no information).
+Hence to measure $\textbf{information content}$ we need a quantity say $h(x)$ that is a $\textbf{monotonic}$ function of the probability function $p(x)$. 
+Also we want $h(\cdot)$ defined in such a way that if we observe the values of two independent random variables namely $x$ and $y$, then the information gained by observing both of them should be equal to the sum of the information gained by observing each of them individually i.e, 
+\begin{align}
+h(x,y) &= h(x) + h(y)
+\end{align}
+We know that the joint distribution of two independent random variables $x$ and $y$ is given by,
+\begin{align}
+p(x,y) &= p(x)p(y)
+\end{align}
+To satisfy (1) and (2), $h(x)$ should be the $\textbf{logarithm}$ of $p(x)$ since logarithm of a product should equal the sum of the logarithms of the individual factors. That is $h(x) = \mathrm{log}\left(p(x)\right)$ and 
+\begin{align}
+h(x,y) &= \mathrm{log}\left(p\left(x,y\right)\right)\\
+&= \mathrm{log}\left(p\left(x\right)p\left(y\right)\right) \\
+&= \mathrm{log}\left(p(x)\right) + \mathrm{log}\left(p(y)\right) \\
+&= h(x) + h(y)
+\end{align}
+
+So we define $h(x)$ as
+\begin{align}
+h(x) &= -\mathrm{log}_2\, p(x)
+\end{align}
+where the minus sign ensures that the information content is positive or zero. The base of the log is arbitrary and here we choose 2 to be consistent with information theory.
+The $\textbf{entropy}$ of a discrete random variable $x$ is defined as the average "surprise" in learning the value of $x$ which is equal to the expectation of $h(x)$ with respect to the probability distribution $p(x)$ and is given by
+\begin{align}
+\mathbf{H}[x] &= - \sum_x p(x)\, \mathrm{log}_2\, p(x).
+\end{align}
