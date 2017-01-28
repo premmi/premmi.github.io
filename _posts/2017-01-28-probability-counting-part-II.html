@@ -1,0 +1,90 @@
+---
+layout: post
+title:  "Probability Problems on Counting - Part II"
+date:   2017-01-28 14:28:28 +0530
+---
+<p>
+<h1 class="textbf">There are 20 people at a chess club on a certain day. They each find opponents and start playing. How many possibilities are there for how they are matched up, assuming that in each game it does matter who has the white pieces (in a chess game, one player has the white pieces and the other player has the black pieces)?</h1>
+$\mathbf{20}$ people can be ordered in $\mathbf{20!}$ ways. But we do not care about the order of the $\mathbf{10}$ pairs, so we need to divide by $\mathbf{10!}$ to adjust for overcounting. Since it matters who has the white pieces, the order within those pairs matter. Hence the total number of possibilities is $$\mathbf{\frac{20!}{10!}}.$$ 
+   </p>
+   <hr>
+   <br>
+   <p>
+   <h1 class="textbf">
+Two chess players, A and B, are going to play 7 games. Each game has three possible
+outcomes: a win for A (which is a loss for B), a draw (tie), and a loss for A (which is
+a win for B). A win is worth 1 point, a draw is worth 0.5 points, and a loss is worth 0
+points.
+     </h1>
+     <ol type="a">
+       <li>
+       <h1 class="textbf">How many possible outcomes for the individual games are there, such that overall player A ends up with 3 wins, 2 draws, and 2 losses?  </h1>
+       <p>
+Out of the $\mathbf{7}$ games player A can win any of the $\mathbf{3}$ games, which gives $\mathbf{\binom{7}{3}}$ possibilities. Similarly out of the remaining $\mathbf{4}$ games player A can draw any of the $\mathbf{2}$ games and player A loses the remaining $\mathbf{2}$ games. So the total number of possible outcomes for the individual games are: $$\mathbf{\binom{7}{3} \binom{4}{2} \binom{2}{2}.}$$ 
+       </p>
+       </li>
+       <li>
+       <h1 class="textbf">How many possible outcomes for the individual games are there, such that A ends up with 4 points and B ends up with 3 points?</h1>
+<p>
+A ends up with $\mathbf{4}$ points and B with $\mathbf{3}$ points in the following cases:
+	<ol type="i">
+		<li>
+		A wins $\mathbf{4}$ games, draws $\mathbf{0}$ games and loses $\mathbf{3}$ games.	
+		</li>
+		<li>
+	    A wins $\mathbf{3}$ games, draws $\mathbf{2}$ games and loses $\mathbf{2}$ games.		
+		</li>
+		<li>
+		A wins $\mathbf{2}$ games, draws $\mathbf{4}$ games and loses $\mathbf{1}$ game.	
+		</li>
+		<li>
+		A wins $\mathbf{1}$ game, draws $\mathbf{6}$ games and loses $\mathbf{0}$ games.	
+		</li>
+    </ol>
+ So the total number of possible outcomes for the individual games such that A ends up with 4 points and B ends up with 3 points is:
+\begin{align*}
+\mathbf{\binom{7}{4} \binom{3}{0} \binom{3}{3} + \binom{7}{3} \binom{4}{2} \binom{2}{2}} \\ & \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!   \mathbf{+ \binom{7}{2} \binom{5}{4} \binom{1}{1} + \binom{7}{1} \binom{6}{6} \binom{0}{0}.} \\
+\end{align*}   		
+</p>
+</li>
+<li>
+<h1 class="textbf">	Now assume that they are playing a best-of-7 match, where the match will end as soon as either player has 4 points. For example, if after 6 games the score is 4 to 2 in
+favor of A, then A wins the match and they don't play a 7th game. How many possible outcomes for the individual games are there, such that the match lasts for 7 games and
+A wins by a score of 4 to 3?</h1>
+<p>
+Since the match has to last for $\mathbf{7}$ games, A has to either win or draw the $\mathbf{7th}$ game, otherwise the match would end earlier. First let us consider the case where A $\mathbf{wins}$ the $\mathbf{7th}$ game. So by the end of the first $\mathbf{6}$ games A scores $\mathbf{3}$ points and B scores $\mathbf{3}$ points. The number of ways this happens is as follows:
+<ol type="i">
+	<li>A wins $\mathbf{3}$ games, draws $\mathbf{0}$ games and loses $\mathbf{3}$ games. </li>
+	<li>A wins $\mathbf{2}$ games, draws $\mathbf{2}$ games and loses $\mathbf{2}$ games. </li>
+	<li>A wins $\mathbf{1}$ game, draws $\mathbf{4}$ games and loses $\mathbf{1}$ game.</li>
+	<li>A wins $\mathbf{0}$ games, draws $\mathbf{6}$ games and loses $\mathbf{0}$ games.</li>
+</ol>
+So the total number of possible outcomes for the individual games such that A ends up with 4 points and B ends up with 3 points with A $\mathbf{winning}$ the $\mathbf{7th}$ game is:
+\begin{align*}
+\mathbf{\binom{6}{3} \binom{3}{0} \binom{3}{3} + \binom{6}{2} \binom{4}{2} \binom{2}{2}} \\ & \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!   \mathbf{+ \binom{6}{1} \binom{5}{4} \binom{1}{1} + \binom{6}{0} \binom{6}{6} \binom{0}{0}.} \\
+\end{align*}
+Now let us consider the case where A $\mathbf{draws}$ the $\mathbf{7th}$ game. This can happen in the following ways:
+<ol type="i"> 
+<li>A wins $\mathbf{3}$ games, draws $\mathbf{1}$ game and loses $\mathbf{2}$ games. </li>
+<li>A wins $\mathbf{2}$ games, draws $\mathbf{3}$ games and loses $\mathbf{1}$ game.</li> 
+<li>A wins $\mathbf{1}$ game, draws $\mathbf{5}$ games and loses $\mathbf{0}$ games.</li>
+</ol>
+So the total number of possible outcomes for the individual games such that A ends up with 4 points and B ends up with 3 points with A $\mathbf{drawing}$ the $\mathbf{7th}$ game is:
+\begin{align*}
+\mathbf{\binom{6}{3} \binom{3}{1} \binom{2}{2} + \binom{6}{2} \binom{4}{3} \binom{1}{1} + \binom{6}{1} \binom{5}{5} \binom{0}{0} .} \\
+\end{align*}
+Hence the total number of possible outcomes for the individual games such that A ends up with 4 points and B ends up with 3 points and the match lasts till the $\mathbf{7th}$ game is:
+\begin{multline} \notag
+\mathbf{\binom{6}{3} \binom{3}{0} \binom{3}{3} + \binom{6}{2} \binom{4}{2} \binom{2}{2}} \\ \mathbf{+ \binom{6}{1} \binom{5}{4} \binom{1}{1} + \binom{6}{0} \binom{6}{6} \binom{0}{0}} \\
+\mathbf{+ \binom{6}{3} \binom{3}{1} \binom{2}{2} + \binom{6}{2} \binom{4}{3} \binom{1}{1} + \binom{6}{1} \binom{5}{5} \binom{0}{0} .} \\
+\end{multline}
+</p>
+</li>
+</ol>
+</p>
+<br>
+<br>
+<h4>References:</h4>
+Joseph K. Blitzstein and Jessica Hwang. 
+<em>Introduction to Probability</em>
+$\textbf{Exercises: Counting}$
