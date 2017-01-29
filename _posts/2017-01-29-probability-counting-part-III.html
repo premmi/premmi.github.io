@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "Probability Problems on Counting - Part III"
+date:   2017-01-29 14:28:30 +0530
+---
+<p>
+<h1 class="textbf">Let A and B be sets with $\boldsymbol \mid$A$\boldsymbol \mid$ = n, $\boldsymbol \mid$B$\boldsymbol \mid$ = m.</h1>
+<ol type="a">
+<li>
+    <h1 class="textbf">How many functions are there from A to B (i.e., functions with domain A, assigning an element of B to each element of A)?</h1>
+    <p>
+        Each element of $\mathbf{A}$ can be assigned to any of the $\mathbf{m}$ elements of $\mathbf{B}$. So the total number of functions from $\mathbf{A}$ to $\mathbf{B}$ is: $\mathbf{m^n}$.
+    </p>
+</li>
+<li>
+    <h1 class="textbf">How many one-to-one functions are there from A to B?</h1>
+    <p>
+        If $\mathbf{m < n}$ there are $\mathbf{0}$ one-to-one functions from $\mathbf{A}$ to $\mathbf{B}$ since each element in $\mathbf{A}$ cannot be uniquely assigned to an element in $\mathbf{B}$ since there are not enough elements in $\mathbf{B}$. If $\mathbf{m \geq n}$ then there are $\mathbf{m}$ ways to assign the first element of $\mathbf{A}$ to $\mathbf{B}$, $\mathbf{m-1}$ ways to assign the second element of $\mathbf{A}$ to $\mathbf{B}$ and so on. So the number of one-to-one functions from $\mathbf{A}$ to $\mathbf{b}$ when $\mathbf{m \geq n}$ is: $$\mathbf{m \left(m-1\right) \cdots \left(m-n+1\right) = \dfrac{m!}{\left(m-n\right)!}}.$$
+    </p>
+</li>
+</ol>
+</p>
+<hr>
+<br>
+<p>
+    <h1 class="textbf">Four players, named A, B, C, and D, are playing a card game. A standard, well-shuffled deck of cards is dealt to the players (so each player receives a 13-card hand).</h1>
+    <ol type="a">
+        <li>
+            <h1 class="textbf">How many possibilities are there for the hand that player A will get? (Within a hand, the order in which cards were received doesn't matter.)</h1>
+            <p>
+                Out of the $\mathbf{52}$ cards, player A can get any $\mathbf{13}$ cards. So the number of possibilities for the hand that player A will get is: $\mathbf{\binom{52}{13}}$.
+            </p>
+        </li>
+        <li>
+            <h1 class="textbf">How many possibilities are there overall for what hands everyone will get, assuming that it matters which player gets which hand, but not the order of cards within a hand?</h1>
+            <p>
+                Player A can get any of the $\mathbf{13}$ cards out of the $\mathbf{52}$ cards, player B can get any of the $\mathbf{13}$ cards from the remaining $\mathbf{39}$ cards, player C can get any of the $\mathbf{13}$ cards from the remaining $\mathbf{26}$ cards and player D gets the remaining $\mathbf{13}$ cards. So the total number of possibilities is: $$\mathbf{\binom{52}{13}  \binom{39}{13}  \binom{26}{13}  \binom{13}{13} }.$$
+            </p>
+        </li>
+        <li>
+            <h1 class="textbf">Explain intuitively why the answer to Part (b) is not the fourth power of the answer to Part (a).</h1>
+            <p>
+                The answer is not $\mathbf{\binom{52}{13}^4}$ because every time we deal a card to a player, that card cannot be dealt again to another player. But $\mathbf{\binom{52}{13}^4}$ means that each player is dealt with cards from $\mathbf{4}$ separate $\mathbf{52}$ cards pack and not from a single pack.
+            </p>
+        </li>
+    </ol>    
+</p> 
+<hr>
+<br>
+<p>
+    <h1 class="textbf">A certain casino uses 10 standard decks of cards mixed together into one big deck, which we will call a superdeck. Thus, the superdeck has 52 · 10 = 520 cards, with 10 copies of each card. How many different 10-card hands can be dealt from the superdeck? The order of the cards does not matter, nor does it matter which of the original 10 decks the cards came from. Express your answer as a binomial coefficient.<br>Hint: Bose-Einstein.</h1>
+    <p>
+        We can think of this problem as being able to choose from $\mathbf{52}$ cards where each card can be chosen from 0 to 10 times and we have to choose a total of 10 times where we only care about the number of times each card is chosen. So the number of ways to choose different 10-card hands is: $$\mathbf{\binom{52+10-1}{10}}.$$
+    </p>
+</p> 
+<hr>
+<br>
+<p>
+    <h1 class="textbf">You are ordering two pizzas. A pizza can be small, medium, large, or extra large, with any combination of 8 possible toppings (getting no toppings is allowed, as is getting all 8). How many possibilities are there for your two pizzas?</h1>
+    <p>
+        1 out of 4 pizza sizes can be chosen and for each of the toppings there is an option of either choosing it or not choosing it. So the number of ways to order one pizza is $\mathbf{\binom{4}{1} \times 2^8 = 2^{10}}$. The second pizza can be either the same as the first one in which case there is only one way of choosing it or it could be a pizza different from the first one in which case we have $\mathbf{2^{10} - 1}$ ways of choosing it. Since we don't care about the order of the pizzas we divide by $\mathbf{2!}$ to account for overcounting. So the total number of ways to order two pizzas is: $$\mathbf{2^{10} + \frac{2^{10}-1}{2!}}.$$
+    </p>
+</p> 
+<br>
+<br>
+<h4>References:</h4>
+Joseph K. Blitzstein and Jessica Hwang. 
+<em>Introduction to Probability</em>
+$\textbf{Exercises: Counting}$
