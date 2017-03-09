@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "Probability Problems on Story Proofs- Part II"
+date:   2017-03-09 10:18:30 +0530
+---
+<p>
+<h1 class="textbf">Give a story proof that $\mathbf{\sum_{k=0}^n \binom{n}{k} = 2^n}.$</h1>
+Suppose you have $\mathbf{n}$ types of chocolates. Depending on your mood, on a particular day you might choose to eat anywhere between $\mathbf{0}$ to $\mathbf{n}$ chocolates. The total number of ways you can eat chocolates  is given by the $\mathbf{LHS}$ of the identity (you can choose to eat 0 or 1 or 2 etc). Each chocolate can either be eaten or not eaten, which gives the $\mathbf{RHS}$ of the identity.
+   </p>
+   <hr>
+   <br>
+   <p>
+   <h1 class="textbf">
+Show that for all positive integers n and k with n $\geq$ k, $$\mathbf{\binom{n}{k}+ \binom{n}{k-1} = \binom{n+1}{k}},$$ doing this in two ways: (a) algebraically and (b) with a story, giving an interpretation for why both sides count the same thing.
+<br>
+Hint for the story proof: Imagine n + 1 people, with one of them pre-designated as “president”.
+     </h1>
+     <ol type="a">
+       <li>
+       <h1 class="textbf">algebraically</h1>
+       <p>
+\begin{align*}
+\binom{n}{k}+ \binom{n}{k-1} &= \dfrac{n!}{(n-k)!k!} + \dfrac{n!}{(n-k+1)!(k-1)!} \\ \\
+&= \dfrac{n!(n-k+1) + n!k}{k!(n-k+1)!} \\ \\
+&= \dfrac{n!(n+1)}{k!(n-k+1)!} \\ \\
+&= \dfrac{(n+1)!}{k!(n-k+1)!} \\ \\
+&= \binom{n+1}{k}
+\end{align*}
+       </p>
+       </li>
+       <li>
+       <h1 class="textbf">with a story</h1>
+<p>
+Suppose from  a group of $\mathbf{n+1}$ people we have to form a committee comprising of $\mathbf{k}$ people. Also in this group one person is pre-designated as president. The number of ways of forming this committee is given by $\mathbf{\binom{n+1}{k}}$ which is the $\mathbf{RHS}$ of the identity. We can also think of forming the committee in two ways, one in which the president $\mathbf{is}$ chosen and out of the remaining $\mathbf{n}$ people we choose $\mathbf{k-1}$ and one is which the president is $\mathbf{not}$ chosen and we choose $\mathbf{k}$ people from $\mathbf{n}$ people. Summing these two cases we get $\mathbf{\binom{n}{k-1} + \binom{n}{k}}$ which is the $\mathbf{LHS}$ of the identity.
+</p>
+</li>
+</ol>
+</p>
+<hr>
+<br>
+<p>
+	
+			<h1 class="textbf">Give a story proof that $$\mathbf{\sum_{k=1}^n k \binom{n}{k}^{\!\!\!2} = n \binom{2n-1}{n-1},}$$ for all positive integers n.
+            <br>
+            Hint: Consider choosing a committee of size n from two groups of size n each, where only one of the two groups has people eligible to become president.
+            </h1>
+			<p>
+				Consider two groups each of size $\mathbf{n}$, one comprising of boys and the other of girls. Suppose we have to form a committee of $\mathbf{n}$ people from these two groups with one of them being designated as president. Also suppose that only girls are eligible to be elected as president. If $\mathbf{k}$ boys are chosen to be on the committee, there are $\mathbf{\binom{n}{k}}$ ways of choosing them, $\mathbf{\binom{n}{n-k} = \binom{n}{k}}$ ways of choosing the girls and $\mathbf{k}$ ways of choosing the president which gives the $\mathbf{LHS}$ of the identity. Alternatively the committee can be formed by first choosing the president from the group of $\mathbf{n}$ girls and then choosing the remaining $\mathbf{n-1}$ people from the available $\mathbf{2n-1}$ people which forms the $\mathbf{RHS}$ of the identity.
+			</p>
+		
+			
+<br>
+<br>
+<h4>References:</h4>
+Joseph K. Blitzstein and Jessica Hwang. 
+<em>Introduction to Probability</em>
+$\textbf{Exercises: Story Proofs}$
